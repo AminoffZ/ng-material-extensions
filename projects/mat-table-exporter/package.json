@@ -10,13 +10,13 @@
     "url": "https://github.com/HalitTalha/mat-table-extensions/tree/master/projects/mat-table-exporter"
   },
   "peerDependencies": {
-    "@angular/cdk": "^16.0.0",
-    "@angular/common": "^16.0.0",
-    "@angular/core": "^16.0.0",
-    "@angular/material": "^16.0.0"
+    "@angular/cdk": "^16.2.8",
+    "@angular/common": "^16.2.9",
+    "@angular/core": "^16.2.9",
+    "@angular/material": "^16.2.8"
   },
   "dependencies": {
-    "cdk-table-exporter": "^16.0.0",
+    "cdk-table-exporter": "https://github.com/AminoffZ/ng-material-extensions/releases/download/v16.0.0/cdk-table-exporter-16.0.0.tgz",
     "tslib": "^2.3.0"
   },
   "sideEffects": false,

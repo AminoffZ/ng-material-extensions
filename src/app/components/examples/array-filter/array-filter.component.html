@@ -24,16 +24,15 @@
     <mat-header-cell *matHeaderCellDef>
 
       <mat-form-field class="example-chip-list">
-        <mat-chip-list #chipList aria-label="Fruit selection">
-          <mat-chip *ngFor="let size of filterEntity.availableSizes" [selectable]="true" [removable]="true"
-            (removed)="remove(size)">
+        <mat-chip-grid #chipGrid aria-label="Fruit selection">
+          <mat-chip-row *ngFor="let size of filterEntity.availableSizes" removable (removed)="remove(size)">
             {{size}}
             <mat-icon matChipRemove>cancel</mat-icon>
-          </mat-chip>
-          <input placeholder="Add Size" [matChipInputFor]="chipList"
+          </mat-chip-row>
+          <input matInput placeholder="Add Size" [matChipInputFor]="chipGrid"
             [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="true"
             (matChipInputTokenEnd)="add($event)">
-        </mat-chip-list>
+        </mat-chip-grid>        
       </mat-form-field>
     </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.availableSizes}} </mat-cell>
